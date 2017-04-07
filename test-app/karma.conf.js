@@ -3,20 +3,20 @@ module.exports = function(config) {
     frameworks: ['jasmine', 'closure'],
     files: [
       // closure base
-      {pattern: 'lib/goog/base.js'},
+      {pattern: '../node_modules/google-closure-library/closure/goog/base.js'},
       // included files - tests
       {pattern: 'test/*.js'},
       // these are only watched and served
       {pattern: 'js/*.js', included: false},
       // external deps
-      {pattern: 'lib/goog/deps.js', included: false, served: false},
-      {pattern: 'lib/goog/**/*.js', included: false}
+      {pattern: '../node_modules/google-closure-library/closure/goog/deps.js', included: false, served: false},
+      {pattern: '../node_modules/google-closure-library/closure/goog/**/*.js', included: false}
     ],
 
     preprocessors: {
       'test/*.js': ['closure', 'closure-iit'],
       'js/*.js': ['closure'],
-      'lib/goog/deps.js': ['closure-deps']
+      '../node_modules/google-closure-library/closure/goog/deps.js': ['closure-deps']
     },
 
     browsers: ['Chrome'],
