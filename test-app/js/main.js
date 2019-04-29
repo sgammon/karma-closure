@@ -1,9 +1,9 @@
-goog.provide('main');
+goog.module('main');
 
 goog.require('a');
 goog.require('b');
+const f = goog.require('f');
 
-
-main = function(one, two) {
-  return a(one) + b(two);
+exports = function(one, two, three) {
+  return a(one) + b(two) + f(three);
 };

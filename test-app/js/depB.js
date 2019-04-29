@@ -1,5 +1,6 @@
 goog.provide('b');
 
 b = function(value) {
-  return 2 * value;
+  const f = goog.module.get('f');
+  return f(2 * value);
 };
